@@ -380,7 +380,12 @@ static bool g_is_cable_workable_detect = false;
 #define USB_MA_1450 (1450)
 #define USB_MA_1500	(1500)
 #define USB_MA_1600	(1600)
+#define USB_MA_1700	(1700)
+#define USB_MA_1800	(1800)
 #define USB_MA_2000	(2000)
+#define USB_MA_2100	(2100)
+#define USB_MA_2200	(2200)
+#define USB_MA_2500	(2500)
 #endif //CONFIG_HTC_BATT_PCN0010/CONFIG_HTC_BATT_WA_PCN0006/CONFIG_HTC_BATT_WA_PCN0008
 #ifdef CONFIG_MACH_DUMMY
 #define USB_MA_3000     (3000)
@@ -594,12 +599,12 @@ module_param_named(
 
 #ifdef CONFIG_HTC_BATT
 #ifdef CONFIG_HTC_BATT_WA_PCN0021
-static int smbchg_default_dcp_icl_ma = 1000;
+static int smbchg_default_dcp_icl_ma = 1100;
 #else
-static int smbchg_default_dcp_icl_ma = 1500;
+static int smbchg_default_dcp_icl_ma = 2200;
 #endif //CONFIG_HTC_BATT_WA_PCN0021
 #else
-static int smbchg_default_dcp_icl_ma = 1800;
+static int smbchg_default_dcp_icl_ma = 2500;
 #endif // CONFIG_HTC_BATT
 module_param_named(
 	default_dcp_icl_ma, smbchg_default_dcp_icl_ma,
